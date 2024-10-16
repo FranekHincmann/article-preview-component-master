@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>My solution | Article preview component</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="image-desk">
+        <img src="./images/drawers.jpg" alt="" class="image-desk-nodiv" />
+      </div>
+
+      <aside>
+        <div class="heading-one">
+          <h3 class="nav">
+            Shift the overall look and feel by <br />
+            adding these wonderful touches to <br />
+            furniture in your home
+          </h3>
+        </div>
+        <div class="description">
+          <p class="paragraph-one">
+            Ever been in a room and felt like something was missing? <br />
+            Perhaps it felt slighty bare and unviting I've got some <br />
+            simple tips to help you make any room feel complete.
+          </p>
+        </div>
+        <footer class="images-js">
+          <div class="image-woman">
+            <img src="./images/avatar-michelle.jpg" alt="" class="woman" />
+          </div>
+          <div class="surname">
+            <h4>Michelle Appleton</h4>
+            <h5>28 Jun 2020</h5>
+          </div>
+          <div class="share-button">
+            <button class="share">
+              <img
+                src="./images/icon-share.svg"
+                alt="share button"
+                class="image-share"
+                id="image-share"
+              />
+            </button>
+          </div>
+        </footer>
+        <div class="social-media" id="social-media">
+          <h4 class="share-word">SHARE</h4>
+          <img src="./images/icon-facebook.svg" alt="" class="facebook" />
+          <img src="./images/icon-twitter.svg" alt="" class="twitter" />
+          <img src="./images/icon-pinterest.svg" alt="" class="pinterest" />
+        </div>
+      </aside>
+
+      <script>
+        let shareButton = document.querySelectorAll(".image-share");
+
+        shareButton.forEach((button) => {
+          button.addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            const shareDescription1 = document.querySelector(".social-media");
+
+            if (shareDescription1.style.display === "none") {
+              shareDescription1.style.display = "flex";
+            } else {
+              shareDescription1.style.display = "none";
+            }
+            if (shareDescription1.style.display === "flex") {
+            }
+          });
+        });
+      </script>
+    </main>
+  </body>
+</html>
